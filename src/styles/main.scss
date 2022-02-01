@@ -1,0 +1,14 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$gray-250: rgb(250, 250, 250);
+$gray-240: rgb(240, 240, 240);
+$gray-230: rgb(230, 230, 230);
+$gray-220: rgb(220, 220, 220);
+$gray-200: rgb(200, 200, 200);
+
+@import "global";
+@import "stopwatch";

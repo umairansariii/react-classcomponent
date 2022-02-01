@@ -1,0 +1,69 @@
+.stopwatch {
+    overflow: hidden;
+    height: 500px;
+    width: 300px;
+    border: 1px solid $gray-200;
+    border-radius: 1rem;
+
+    .timer {
+        @include flex-center;
+        height: 30%;
+        font-size: 3rem;
+        letter-spacing: -.2rem;
+        font-family: 'Consolus', monospace;
+    }
+    .buttons {
+        overflow: hidden;
+        display: flex;
+        height: 8%;
+        margin: 0 1rem;
+        border-radius: .5rem;
+        button {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            padding: .4rem 1rem;
+            img {
+                height: .8rem;
+            }
+            &:hover {
+                background-color: $gray-230;
+            }
+        }
+    }
+    .laps {
+        height: 62%;
+        padding-top: 1rem;
+        ol {
+            overflow-y: auto;
+            list-style: none;
+            height: 100%;
+            li {
+                cursor: pointer;
+                @include flex-center;
+                height: 2rem;
+                width: 100%;
+                font-size: 1rem;
+                font-family: 'Consolus', monospace;
+                transition: height 250ms, font-size 250ms;
+                &:hover {
+                    height: 4rem;
+                    font-size: 2rem;
+                    background-color: $gray-250;
+                }
+            }
+        }
+    }
+}
+.run {
+    animation: pulse 500ms ease infinite;
+}
+.stop {
+    background-color: $gray-220;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: .5; }
+    100% { opacity: 1; }
+}
